@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(
+    3deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(224, 253, 45, 1) 100%
+  );
+}
+
+.login,
+.signup {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 2rem;
+  background-color: white;
+  width: 40%;
+}
+
+.login__heading,
+.signup__heading {
+  width: 80%;
+  font-size: 24px;
+  font-weight: 200;
+  margin: 20px;
+}
+
+.login__input,
+.login__password,
+.signup__input,
+.signup__password {
+  width: 80%;
+  height: 40px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 2px solid lightgray;
+  border-radius: 2px;
+  outline: none;
+}
+
+.login__button,
+.signup__button {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 24px;
+  background-color: #22c1c3;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login__button:hover,
+.signup__button:hover {
+  background-color: #1ba3a5;
+}
+
+.login__newUser {
+  text-decoration: none;
+  color: #22c1c3;
+  cursor: pointer;
+}
+
+/*grocery page*/
+.grocery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.grocery__title {
+  margin: 20px;
+  color: #242424;
+  font-weight: 200;
+  
+}
+
+.grocery__items {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.grocery__itemsInput {
+  flex: 1;
+  height: 40px;
+  padding: 20px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+.grocery__itemsAddButton {
+  height: 40px;
+  background-color: #22c1c3;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.grocery__list {
+  width: 30%;
+}
+.grocery__listItemDiv {
+  background-color: white;
+  display: flex;
+  list-style-type: none;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.grocery__listItem {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.grocery__listItemButton {
+  background-color: #cf5a37;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+}
+
+.fa-trash {
+  pointer-events: none;
+}
+
+.displayNone {
+    display: none;
+  }
+  
