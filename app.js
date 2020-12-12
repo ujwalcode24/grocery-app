@@ -106,10 +106,20 @@ function addItemtoLocalStorage() {
   let indexOfSelectedUser = allUserDetails.findIndex(
     (user) => user.username === currentUser
   );
-  selectedUser[0].items.push(groceryItem);
-  allUserDetails[indexOfSelectedUser] = selectedUser[0];
-  localStorage.setItem("users", JSON.stringify(allUserDetails));
-  groceryListTemplate();
+  console.log(selectedUser[0].items);
+  if (selectedUser[0].items === null) {
+    selectedUser[0].items.push(groceryItem);
+    allUserDetails[indexOfSelectedUser] = selectedUser[0];
+    localStorage.setItem("users", JSON.stringify(allUserDetails));
+    groceryListTemplate();
+  } else if (selectedUser[0].items.length < 5) {
+    selectedUser[0].items.push(groceryItem);
+    allUserDetails[indexOfSelectedUser] = selectedUser[0];
+    localStorage.setItem("users", JSON.stringify(allUserDetails));
+    groceryListTemplate();
+  } else {
+    alert("item limit exceeded.");
+  }
 }
 
 function removeItemCheck(e) {
